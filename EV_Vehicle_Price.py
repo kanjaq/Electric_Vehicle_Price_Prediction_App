@@ -3,10 +3,11 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import joblib
+import pickle
 from PIL import Image
 
 #load trained model
-model = joblib.load("best_model.pkl")
+model = joblib.load("best_model1.pkl")
 
 # Define the app title and layout
 st.title("Electric Vehicle Price Prediction")
@@ -29,6 +30,6 @@ Accelaration_Time = st.number_input("Accelaration Time ",min_value =1, max_value
 
 #prediction
 if st.button('predict'):
-    Make_Prediction = model.predict([[Fast_Charge,Efficiency,Range,Top_Speed,]])
+    Make_Prediction = model.predict([[Fast_Charge,Battery,Efficiency,Range,Top_Speed,]])
     output = round(Make_Prediction[0],3)
     st.success('Electric Vehicle Price {}'.format(output))
