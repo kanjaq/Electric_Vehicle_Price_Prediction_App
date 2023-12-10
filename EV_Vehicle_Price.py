@@ -20,12 +20,12 @@ st.sidebar.markdown("Thinking it's time to ditch gas and go electric? It's a goo
 
 # Define input fields for features
 
-Battery = st.number_input("Battery Size", min_value=50, max_value=500, value=50, step=1)
-Efficiency = st.number_input("Energy efficiency rating of the vehicle", min_value=100.0, max_value=500.0, value=100.0, step=20.0)
+Battery = st.number_input("Battery Size -kWh", min_value=50, max_value=500, value=50, step=1)
+Efficiency = st.number_input("Energy efficiency rating of the vehicle -hours per Kilometer", min_value=100.0, max_value=500.0, value=100.0, step=20.0)
 Range = st.slider("Range of veicle on a single charge", 150, 1000)
 Fast_Charge = st.number_input("Fast Charge ",min_value =100, max_value=1000, step=20)
 Top_Speed = st.number_input("Top Speed ",min_value =100, max_value=500, step=30)
-Accelaration_Time = st.number_input("Accelaration Time ",min_value =1, max_value=20, step=2)
+Accelaration_Time = st.number_input("Accelaration Time 0- 100 Km per hour ",min_value =1, max_value=20, step=2)
 
 
 #prediction
