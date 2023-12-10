@@ -11,7 +11,7 @@ model = joblib.load("best_model1.pkl")
 
 # Define the app title and layout
 st.title("Electric Vehicle Price Prediction")
-st.text('How Much Does an Electric Car Cost?')
+st.text('How Much Does an Electric Car Cost in Germany?')
 
 image = Image.open('dataset2-cover.jpg')
 st.sidebar.image(image, caption='Electric Vehicles')
